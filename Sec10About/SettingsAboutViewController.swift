@@ -71,7 +71,6 @@ final class SettingsAboutView: UIView {
     private func setConstraints() {
         
         logoImg.snp.makeConstraints { make in
-            make.top.equalTo(self.snp.top).offset(74)
             make.centerX.equalTo(self.snp.centerX)
             make.size.equalTo(CGSize(width: 96, height: 96))
         }
@@ -90,6 +89,7 @@ final class SettingsAboutView: UIView {
             make.top.equalTo(self.secondLabel.snp.bottom).offset(64)
             make.leading.equalTo(self.snp.leading).offset(24)
             make.trailing.equalTo(self.snp.trailing).offset(-24)
+            make.centerY.equalToSuperview()
             make.height.equalTo(44)
         }
         
